@@ -1,0 +1,27 @@
+.parameters-grid {
+  display: flex;
+  flex-direction: row;
+  gap: 12px;
+  width: 100%;
+  align-items: flex-end;
+  justify-content: flex-start; /* Прижимаем всё к левому краю */
+}
+
+/* Общий стиль для оберток всех инпутов */
+.parameters-grid > div {
+  /* flex-grow: 0 (не расширяться), 
+     flex-shrink: 1 (сужаться если надо), 
+     flex-basis: 120px (идеальный размер) */
+  flex: 0 1 120px; 
+}
+
+/* Поле "Количество" можно сделать чуть шире, если хочешь */
+.parameters-grid > div:nth-child(3) {
+  flex: 0 1 140px;
+}
+
+/* Переключатель UNIQUE */
+.parameters-grid > .switch-wrapper {
+  flex: 0 0 auto; /* Вообще не даем ему менять размер */
+  margin-left: 8px; /* Небольшой отступ от инпутов */
+}

@@ -1,0 +1,30 @@
+* {
+    padding:0;
+    margin:0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+
+body {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: #0B1326;
+}
+
+:root {
+  --bg-main: #0F172A;          /* Глубокий фон страницы */
+  --bg-header: #111A2D;        /* Фон хедера */
+  --bg-card: #171F33;          /* Фон блоков/карточек */
+  
+  --border-color: #464554;     /* Цвет линий и обводок */
+  
+  --text-primary: #C0C1FF;     /* Главный белый текст */
+  --text-white: #fff;   /* Вспомогательный серый текст */
+  
+  --accent-color: #C0C1FF;     /* Светло-фиолетовый акцент */
+  --accent-glow: rgba(99, 102, 241, 0.8); /* Цвет свечения */
+  
+  --success-color: #10B981;    /* Неоновый зеленый (для результата) */
+  --button-hover: #4F46E5;     /* Цвет кнопки при наведении */
+  --dark-blue: #0D0096;       /* Черно-синий для фона кнопки*/
+}
