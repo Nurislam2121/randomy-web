@@ -58,7 +58,7 @@ const RandomNumberPage = () => {
 
       const updatedHistory = [...newNumbers, ...history].slice(0, 10);
       setHistory(updatedHistory);
-      localStorage.setItem("random_numbers_history", JSON.stringify(updatedHistory));
+      localStorage.setItem("randomNumberHistory", JSON.stringify(updatedHistory));
     }
   }, 40);
 };
@@ -103,7 +103,7 @@ const RandomNumberPage = () => {
           className="generate-button"
           onClick={HandleGenerate}
         >
-          Generate
+          Сгенерировать
         </Button>
       </ContentContainer>
 

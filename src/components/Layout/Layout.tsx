@@ -1,12 +1,12 @@
-import { Outlet } from 'react-router-dom';
-import Header from './../Header/Header';
-import './Layout.css';
+import { Outlet } from "react-router-dom";
+import Header from "./../Header/Header";
+import "./Layout.css";
 
 const Layout = () => {
   return (
     <div className="app-layout">
       <Header />
-      
+
       <div className="content-container">
         <aside className="ad-space left-ad">
           <span>ADVERTISEMENT</span>
@@ -16,7 +16,7 @@ const Layout = () => {
           <Outlet />
         </main>
 
-            <aside className="ad-space right-ad">
+        <aside className="ad-space right-ad">
           <span>ADVERTISEMENT</span>
         </aside>
       </div>

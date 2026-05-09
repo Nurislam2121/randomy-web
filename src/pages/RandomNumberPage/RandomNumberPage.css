@@ -2,7 +2,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 80px 0; 
+  padding: 40px 0; 
   width: 100%;
   min-height: 200px;
 }
@@ -12,6 +12,7 @@
   font-weight: 700;
   color: var(--text-primary);
   text-shadow: 0 0 20px rgba(129, 140, 248, 0.3); 
+  text-align: center;
 }
 
 .parameters-grid {
@@ -54,10 +55,6 @@
 .generate-button:active img {
   transform: rotate(180deg);
   transition: 0.3s;
-}
-
-.history-number-container {
-  margin-top: 24px;
 }
 
 .history-list {
