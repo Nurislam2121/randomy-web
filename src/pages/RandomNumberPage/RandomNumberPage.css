@@ -1,27 +1,116 @@
-.parameters-grid {
+.result-display {
   display: flex;
-  flex-direction: row;
-  gap: 12px;
+  justify-content: center;
+  align-items: center;
+  padding: 80px 0; 
+  width: 100%;
+  min-height: 200px;
+}
+
+.big-number {
+  font-size: 64px;
+  font-weight: 700;
+  color: var(--text-primary);
+  text-shadow: 0 0 20px rgba(129, 140, 248, 0.3); 
+}
+
+.parameters-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr)) auto; 
+  gap: 16px;
   width: 100%;
   align-items: flex-end;
-  justify-content: flex-start; /* Прижимаем всё к левому краю */
+  box-sizing: border-box;
 }
 
-/* Общий стиль для оберток всех инпутов */
 .parameters-grid > div {
-  /* flex-grow: 0 (не расширяться), 
-     flex-shrink: 1 (сужаться если надо), 
-     flex-basis: 120px (идеальный размер) */
-  flex: 0 1 120px; 
+  width: 100% !important;
+  max-width: none !important;
+  min-width: 0;
 }
 
-/* Поле "Количество" можно сделать чуть шире, если хочешь */
-.parameters-grid > div:nth-child(3) {
-  flex: 0 1 140px;
-}
-
-/* Переключатель UNIQUE */
 .parameters-grid > .switch-wrapper {
-  flex: 0 0 auto; /* Вообще не даем ему менять размер */
-  margin-left: 8px; /* Небольшой отступ от инпутов */
+  width: auto !important;
+  min-width: fit-content;
+}
+
+.generate-button {
+  transition: transform 0.1s active, box-shadow 0.2s;
+}
+
+.generate-button:hover img {
+  transform: rotate(270deg);
+  transition: transform 0.8s ease-in-out;
+}
+
+.generate-button img {
+  transition: transform 0.4s ease-in-out;
+}
+
+.generate-button:active {
+  transform: scale(0.98); 
+}
+
+.generate-button:active img {
+  transform: rotate(180deg);
+  transition: 0.3s;
+}
+
+.history-number-container {
+  margin-top: 24px;
+}
+
+.history-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 16px;
+}
+
+.history-number-item {
+  background-color: rgba(255, 255, 255, 0.05);
+  border-radius: 10px;
+  padding: 8px 20px;
+  min-width: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+  color: var(--green-color);
+  font-weight: 600;
+  font-size: 16px;
+  
+  transition: all 0.3s ease;
+  border: 1px solid rgba(16, 185, 129, 0.1);
+
+  animation: slideIn 0.3s ease-out forwards;
+}
+
+@media (max-width: 1000px) {
+  .parameters-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+  .big-number {
+    font-size: 48px;
+  }
+}
+
+@media (max-width: 500px) {
+  .parameters-grid {
+    grid-template-columns: 1fr; 
+  }
+  .big-number {
+    font-size: 36px;
+  }
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }

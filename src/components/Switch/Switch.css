@@ -8,7 +8,7 @@
 .switch-label {
   font-size: 12px;
   text-transform: uppercase;
-  color: var(--text-secondary);
+  color: var(--text-primary);
   font-weight: 600;
 }
 

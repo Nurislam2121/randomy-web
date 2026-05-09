@@ -9,6 +9,7 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   background-color: #0B1326;
+  overflow-x: hidden;
 }
 
 :root {
@@ -24,7 +25,7 @@ body {
   --accent-color: #C0C1FF;     /* Светло-фиолетовый акцент */
   --accent-glow: rgba(99, 102, 241, 0.8); /* Цвет свечения */
   
-  --success-color: #10B981;    /* Неоновый зеленый (для результата) */
+  --green-color: #10b981;    /* Неоновый зеленый */
   --button-hover: #4F46E5;     /* Цвет кнопки при наведении */
   --dark-blue: #0D0096;       /* Черно-синий для фона кнопки*/
 }
