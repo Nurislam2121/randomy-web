@@ -8,17 +8,17 @@ const Layout = () => {
       <Header />
 
       <div className="content-container">
-        <aside className="ad-space left-ad">
+        {/* <aside className="ad-space left-ad">
           <span>ADVERTISEMENT</span>
-        </aside>
+        </aside> */}
 
         <main className="main-content">
           <Outlet />
         </main>
 
-        <aside className="ad-space right-ad">
+        {/* <aside className="ad-space right-ad">
           <span>ADVERTISEMENT</span>
-        </aside>
+        </aside> */}
       </div>
     </div>
   );

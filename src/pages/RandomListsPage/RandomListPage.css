@@ -1,0 +1,145 @@
+.list-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.list-title {
+  font-size: 16px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.result-list {
+  font-size: 32px;
+  font-weight: 500;
+  color: var(--text-primary);
+  text-shadow: 0 0 20px rgba(129, 140, 248, 0.3);
+  text-align: center;
+}
+
+.secondary-action-btn {
+  background: transparent;
+  border: 1px solid var(--border-color);
+  color: var(--text-primary);
+  padding: 8px 16px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 12px;
+  transition: 0.3s;
+}
+
+.secondary-action-btn:hover {
+  border-color: var(--text-primary);
+  color: var(--text-primary);
+}
+
+.list-settings-container {
+  gap: 30px;
+}
+
+.list-main-area {
+  background-color: rgba(15, 17, 26, 0.5);
+  border: 1px solid var(--border-color);
+  border-radius: 16px;
+  overflow: hidden;
+}
+
+.custom-textarea {
+  width: 100%;
+  min-height: 250px;
+  background: transparent;
+  border: none;
+  padding: 20px;
+  color: var(--text-primary);
+  font-size: 14px;
+  resize: none;
+  outline: none;
+}
+
+.list-controls-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 20px;
+  background: rgba(255, 255, 255, 0.02);
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
+  flex-wrap: wrap;
+}
+
+.winner-count-inline {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: var(--text-secondary);
+  font-size: 13px;
+}
+
+.inline-number-input {
+  width: 50px;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid var(--border-color);
+  border-radius: 6px;
+  color: var(--text-primary);
+  padding: 4px 8px;
+  text-align: center;
+  outline: none;
+}
+
+.empty-state {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  gap: 16px;
+}
+
+.cup-icon {
+  width: 120px;
+}
+
+.empty-text {
+  color: var(--text-primary);
+  font-size: 16px;
+  line-height: 1.5;
+  max-width: 350px;
+  opacity: 0.8;
+}
+
+.results-wrapper,
+.empty-state {
+  animation: fadeIn 0.4s ease-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(5px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 1000px) {
+}
+
+@media (max-width: 500px) {
+  .cup-icon {
+    width: 80px;
+  }
+  .list-controls-row {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 15px;
+  }
+
+  .winner-count-inline {
+    width: 100%;
+  }
+  .clear-list-btn {
+    width: 100%;
+  }
+}
