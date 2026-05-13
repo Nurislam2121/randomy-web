@@ -2,6 +2,9 @@ import { useState, type FC } from "react";
 import "./Header.css";
 import Logo from "../../assets/Randomy.svg";
 import { Link, useLocation, type Location } from "react-router-dom";
+import {useDispatch, useSelector} from 'react-redux'
+import type { RootState } from "../../Redux/store/store";
+import {toggleTheme} from "../../Redux/slice/themeSlice"
 
 const Header: FC = () => {
   const [isMenuOpen, setIsMenuOpen] = useState<boolean>(false);
@@ -12,6 +15,9 @@ const Header: FC = () => {
   };
 
   const closeMenu = () => setIsMenuOpen(false);
+
+  const dispatch = useDispatch()
+  const themeMode = useSelector((state: RootState) => state.theme.mode)
 
   return (
     <header className="header">
@@ -58,7 +64,7 @@ const Header: FC = () => {
       </div>
 
       <div className="header-right">
-        <div className="header-icon-placeholder"></div>
+        <div className="header-icon-placeholder"><button onClick={() => dispatch(toggleTheme())} className="theme-toggle-button">Toggle Theme</button></div>
       </div>
     </header>
   );
