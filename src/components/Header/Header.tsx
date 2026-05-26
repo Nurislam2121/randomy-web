@@ -64,7 +64,7 @@ const Header: FC = () => {
       </div>
 
       <div className="header-right">
-        <div className="header-icon-placeholder"><button onClick={() => dispatch(toggleTheme())} className="theme-toggle-button">Toggle Theme</button></div>
+        <div className="header-icon-placeholder"><button onClick={() => dispatch(toggleTheme())} className="theme-toggle-button">{themeMode === 'dark' ? 'Light Mode' : 'Dark Mode'}</button></div>
       </div>
     </header>
   );
