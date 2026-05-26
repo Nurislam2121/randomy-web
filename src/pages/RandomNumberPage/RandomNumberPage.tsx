@@ -3,7 +3,7 @@ import Input from "../../components/Input/Input";
 import "./RandomNumberPage.css";
 import Switch from "../../components/Switch/Switch";
 import Button from "../../components/Button/Button";
-import Refresh from "../../assets/refresh.svg";
+import Refresh from "../../assets/Refresh.svg";
 import { useState, useEffect } from "react";
 
 const RandomNumberPage = () => {
