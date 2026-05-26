@@ -1,7 +1,7 @@
 import "./RandomListPage.css";
 import ContentContainer from "../../components/ContentContainer/ContentContainer";
 import Button from "../../components/Button/Button";
-import Refresh from "../../assets/refresh.svg";
+import Refresh from "../../assets/Refresh.svg";
 import { useState, useRef } from "react";
 import CupIcon from "../../assets/cup.svg";
 
